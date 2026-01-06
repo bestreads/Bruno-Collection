@@ -1,0 +1,21 @@
+meta {
+  name: SearchBooks
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{api}}/v1/books/search?q=Harry Potter&limit=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  q: Harry Potter
+  limit: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

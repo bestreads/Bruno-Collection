@@ -1,0 +1,21 @@
+meta {
+  name: PostBook (add Book to Library)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api}}/v1/user/{{id}}/lib/{{bid}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: 1
+  bid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

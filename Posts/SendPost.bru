@@ -1,0 +1,28 @@
+meta {
+  name: SendPost
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{api}}/v1/user/1/post
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "bid": 1,
+    "content": "adasdwasd",
+    "b64image": "AAAAAAAAAAAAA"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

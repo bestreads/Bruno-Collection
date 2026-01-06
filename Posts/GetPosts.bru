@@ -1,0 +1,27 @@
+meta {
+  name: GetPosts
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api}}/v1/post
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "uid": 1,
+    "bid": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

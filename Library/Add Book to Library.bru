@@ -1,18 +1,19 @@
 meta {
-  name: PutBook (change state)
+  name: Add Book to Library
   type: http
-  seq: 3
+  seq: 2
 }
 
-put {
-  url: {{api}}/v1/user/{{id}}/lib/{{bid}}
+post {
+  url: {{api}}/v1/user/{{id}}/lib
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "state": 2
+    "bid": 1,
+    "state": 0
   }
 }
 

@@ -10,10 +10,13 @@ get {
   auth: inherit
 }
 
+params:query {
+  ~limit: 1
+}
+
 body:json {
   {
-    "uid": 1,
-    "bid": 1
+    "uid": 11
   }
 }
 

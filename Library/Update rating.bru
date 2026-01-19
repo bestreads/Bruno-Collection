@@ -1,0 +1,28 @@
+meta {
+  name: Update rating
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{api}}/v1/user/lib/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bookId": 1,
+    "rating": 4
+  }
+}
+
+body:multipart-form {
+  bookId: 1
+  rating: 0
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

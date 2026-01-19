@@ -6,7 +6,7 @@ meta {
 
 put {
   url: {{api}}/v1/user
-  body: json
+  body: multipartForm
   auth: inherit
 }
 
@@ -17,6 +17,13 @@ body:json {
     "password": "",
     "pfp": ""
   }
+}
+
+body:multipart-form {
+  username: 
+  email: 
+  password: 
+  pfp: 
 }
 
 settings {

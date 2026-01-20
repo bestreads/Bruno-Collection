@@ -5,17 +5,19 @@ meta {
 }
 
 get {
-  url: {{api}}/v1/user/{{id}}/lib
+  url: {{api}}/v1/lib
   body: none
   auth: inherit
 }
 
 params:query {
+  ~userId: 11
   ~limit: 10
 }
 
 vars:pre-request {
   id: 11
+  UserID: 
 }
 
 settings {

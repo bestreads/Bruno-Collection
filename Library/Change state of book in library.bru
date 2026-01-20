@@ -1,11 +1,11 @@
 meta {
   name: Change state of book in library
   type: http
-  seq: 3
+  seq: 4
 }
 
 put {
-  url: {{api}}/v1/user/lib/{{bid}}
+  url: {{api}}/v1/lib/{{bid}}
   body: json
   auth: inherit
 }

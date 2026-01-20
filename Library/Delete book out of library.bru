@@ -1,11 +1,11 @@
 meta {
   name: Delete book out of library
   type: http
-  seq: 4
+  seq: 5
 }
 
 delete {
-  url: {{api}}/v1/user/lib/{{bid}}
+  url: {{api}}/v1/lib/{{bid}}
   body: none
   auth: inherit
 }

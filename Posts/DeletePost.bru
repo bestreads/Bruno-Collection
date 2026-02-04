@@ -1,0 +1,20 @@
+meta {
+  name: DeletePost
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{api}}/v1/post?bid=233
+  body: none
+  auth: inherit
+}
+
+params:query {
+  bid: 233
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

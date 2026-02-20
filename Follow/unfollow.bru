@@ -1,17 +1,17 @@
 meta {
-  name: Get user profile
+  name: unfollow
   type: http
-  seq: 2
+  seq: 3
 }
 
-get {
-  url: {{api}}/v1/user/{{id}}
+delete {
+  url: {{api}}/v1/follow?id=2
   body: none
   auth: inherit
 }
 
-vars:pre-request {
-  id: 1
+params:query {
+  id: 2
 }
 
 settings {

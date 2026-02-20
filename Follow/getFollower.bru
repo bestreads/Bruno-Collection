@@ -1,17 +1,17 @@
 meta {
-  name: Get user profile
+  name: getFollower
   type: http
-  seq: 2
+  seq: 1
 }
 
 get {
-  url: {{api}}/v1/user/{{id}}
+  url: {{api}}/v1/user/{{id}}/followers
   body: none
   auth: inherit
 }
 
 vars:pre-request {
-  id: 1
+  id: 3
 }
 
 settings {

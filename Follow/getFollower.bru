@@ -1,0 +1,20 @@
+meta {
+  name: getFollower
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api}}/v1/user/{{id}}/followers
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: 3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

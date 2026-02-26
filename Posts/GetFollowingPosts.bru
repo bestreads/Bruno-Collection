@@ -1,0 +1,21 @@
+meta {
+  name: GetFollowingPosts
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{api}}/v1/post/following
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~offset: 5
+  ~userId: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
